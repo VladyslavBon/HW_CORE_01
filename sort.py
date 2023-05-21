@@ -18,8 +18,8 @@ def normalise(string):
 
     return string
 
-def sort(path):
-    folder = Path(path)
+def sort():
+    folder = Path(argv[1])
 
     os.mkdir(folder / "images")
     images = []
@@ -93,5 +93,6 @@ def sort(path):
     print(f"Archives: {archives}")
     print(f"All known extensions in the target folder: {known_extensions}")
     print(f"All unknown extensions in the target folder: {unknown_extensions}")
-    
-sort(argv[1])
+
+if __name__ == "__main__":   
+    sort()
